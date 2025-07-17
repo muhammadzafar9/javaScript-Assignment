@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
 
 // Import screens
 import HomeScreen from '../screens/HomeScreen';
@@ -10,9 +9,9 @@ import IRRemoteScreen from '../screens/IRRemoteScreen';
 import SmartRemoteScreen from '../screens/SmartRemoteScreen';
 import DeviceSearchScreen from '../screens/DeviceSearchScreen';
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator();
 
-const AppNavigator: React.FC = () => {
+const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator

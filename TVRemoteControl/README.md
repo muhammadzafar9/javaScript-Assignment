@@ -89,19 +89,21 @@ eas submit --platform android
 TVRemoteControl/
 ├── src/
 │   ├── navigation/
-│   │   └── AppNavigator.tsx
+│   │   └── AppNavigator.jsx
 │   ├── screens/
-│   │   ├── HomeScreen.tsx
-│   │   ├── RemoteSelectionScreen.tsx
-│   │   ├── DeviceSearchScreen.tsx
-│   │   ├── IRRemoteScreen.tsx
-│   │   └── SmartRemoteScreen.tsx
+│   │   ├── HomeScreen.jsx
+│   │   ├── RemoteSelectionScreen.jsx
+│   │   ├── DeviceSearchScreen.jsx
+│   │   ├── IRRemoteScreen.jsx
+│   │   └── SmartRemoteScreen.jsx
 │   ├── components/
+│   │   └── RemoteButton.jsx
 │   ├── types/
-│   │   └── index.ts
+│   │   └── index.js
 │   └── utils/
 ├── assets/
-├── App.tsx
+├── App.jsx
+├── index.js
 ├── app.json
 └── package.json
 ```
@@ -110,7 +112,7 @@ TVRemoteControl/
 
 ### Navigation
 - React Navigation v6 with Stack Navigator
-- Type-safe navigation with TypeScript
+- Clean navigation structure with JavaScript
 
 ### Screens
 - **HomeScreen**: Welcome screen with loading animation
@@ -137,8 +139,8 @@ The app uses a consistent color scheme defined in the styles:
 
 ### Adding New Remote Types
 1. Create a new screen in `src/screens/`
-2. Add the route to `RootStackParamList` in `src/types/index.ts`
-3. Add the screen to the navigator in `src/navigation/AppNavigator.tsx`
+2. Add the route definition in `src/types/index.js`
+3. Add the screen to the navigator in `src/navigation/AppNavigator.jsx`
 
 ## Permissions
 
@@ -152,7 +154,7 @@ The app requires the following permissions:
 
 - **React Native**: Cross-platform mobile development
 - **Expo**: Development platform and build service
-- **TypeScript**: Type-safe JavaScript
+- **JavaScript**: Modern JavaScript with JSDoc for type hints
 - **React Navigation**: Navigation library
 - **Expo Linear Gradient**: Gradient backgrounds
 - **Expo Vector Icons**: Icon library

@@ -6,23 +6,12 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 
-type RemoteSelectionScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'RemoteSelection'
->;
-
-interface Props {
-  navigation: RemoteSelectionScreenNavigationProp;
-}
-
 const { width } = Dimensions.get('window');
 
-const RemoteSelectionScreen: React.FC<Props> = ({ navigation }) => {
+const RemoteSelectionScreen = ({ navigation }) => {
   const handleIRRemote = () => {
     navigation.navigate('IRRemote');
   };

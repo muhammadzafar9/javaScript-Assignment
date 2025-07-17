@@ -8,26 +8,15 @@ import {
   Alert,
   Vibration,
 } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 
-type SmartRemoteScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'SmartRemote'
->;
-
-interface Props {
-  navigation: SmartRemoteScreenNavigationProp;
-}
-
 const { width, height } = Dimensions.get('window');
 
-const SmartRemoteScreen: React.FC<Props> = ({ navigation }) => {
+const SmartRemoteScreen = ({ navigation }) => {
   const [isConnected, setIsConnected] = useState(true);
 
-  const handleButtonPress = (buttonName: string) => {
+  const handleButtonPress = (buttonName) => {
     Vibration.vibrate(50);
     console.log(`${buttonName} pressed`);
     // Here you would implement the actual Smart TV functionality

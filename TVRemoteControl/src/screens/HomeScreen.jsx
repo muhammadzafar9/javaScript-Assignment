@@ -6,21 +6,12 @@ import {
   TouchableOpacity,
   Dimensions,
   ActivityIndicator,
-  Image,
 } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
 import { LinearGradient } from 'expo-linear-gradient';
-
-type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
-
-interface Props {
-  navigation: HomeScreenNavigationProp;
-}
 
 const { width, height } = Dimensions.get('window');
 
-const HomeScreen: React.FC<Props> = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

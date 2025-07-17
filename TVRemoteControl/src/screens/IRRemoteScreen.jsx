@@ -8,26 +8,15 @@ import {
   Alert,
   Vibration,
 } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 
-type IRRemoteScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'IRRemote'
->;
-
-interface Props {
-  navigation: IRRemoteScreenNavigationProp;
-}
-
 const { width, height } = Dimensions.get('window');
 
-const IRRemoteScreen: React.FC<Props> = ({ navigation }) => {
+const IRRemoteScreen = ({ navigation }) => {
   const [isConnected, setIsConnected] = useState(false);
 
-  const handleButtonPress = (buttonName: string) => {
+  const handleButtonPress = (buttonName) => {
     Vibration.vibrate(50);
     console.log(`${buttonName} pressed`);
     // Here you would implement the actual IR functionality

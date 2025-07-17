@@ -3,24 +3,11 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
-  ViewStyle,
-  TextStyle,
   Vibration,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-interface RemoteButtonProps {
-  title?: string;
-  icon?: keyof typeof Ionicons.glyphMap;
-  onPress: () => void;
-  style?: ViewStyle;
-  textStyle?: TextStyle;
-  backgroundColor?: string;
-  disabled?: boolean;
-  size?: 'small' | 'medium' | 'large';
-}
-
-const RemoteButton: React.FC<RemoteButtonProps> = ({
+const RemoteButton = ({
   title,
   icon,
   onPress,

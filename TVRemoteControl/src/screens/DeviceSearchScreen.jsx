@@ -7,23 +7,12 @@ import {
   Dimensions,
   ActivityIndicator,
 } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 
-type DeviceSearchScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'DeviceSearch'
->;
-
-interface Props {
-  navigation: DeviceSearchScreenNavigationProp;
-}
-
 const { width } = Dimensions.get('window');
 
-const DeviceSearchScreen: React.FC<Props> = ({ navigation }) => {
+const DeviceSearchScreen = ({ navigation }) => {
   const [isSearching, setIsSearching] = useState(false);
   const [searchComplete, setSearchComplete] = useState(false);
   const [deviceFound, setDeviceFound] = useState(false);
